@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiomich</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="card intro-card">
+                <div class="crown">helloworld("print")</div>
+                <h1 class="title">Oh, hello!</h1>
+                <div class="divider"></div>
+                <p class="description">
+                    I'm Kiomich, a 14 y.o. beginner in web, bot-dev, and shell development from Ukraine (Also I'm interested in networking)
+                </p>
+                <div class="str"></div>
+                <p class="description">
+                    I got into programming randomly at 13 y.o., <span class="highlight">and now I'm here...</span>
+                </p>
+                <div class="str"></div>
+                <p class="description">
+                    English isn't my first language, so I might make some spelling/grammar mistakes!
+                </p>
+            </div>
+            
+            <div class="card links-section">
+                <h2>Links</h2>
+                <div class="str"></div>
+                <div class="links-grid">
+                    <a href="https://t.me/kiomichqqq">
+                        <img class="telegram button" src="https://raw.githubusercontent.com/kiomich/kiomich33.github.io/5908438664e2ba780161cf38cfbe62e00fc8a9c5/tg.svg">
+                    </a>
+                    <a href="https://discord.com/users/762615809297743872">
+                        <img class="discord button" src="https://raw.githubusercontent.com/kiomich/kiomich33.github.io/5908438664e2ba780161cf38cfbe62e00fc8a9c5/dc.svg">
+                    </a>
+                    <a href="https://github.com/kiomich">
+                        <img class="gith button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/e47a418a52cccc749b1671cb0e14628c14beaaae/github.svg">
+                    </a>
+                    <a href="https://www.tiktok.com/@kiomich33w">
+                        <img class="tiktok button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/tiktok.svg">
+                    </a>
+                    <a href="https://steamcommunity.com/profiles/76561199528919632/">
+                        <img class="steam button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/steam.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card tech-section">
+            <h2>Tech stack</h2>
+            
+            <div class="tech-category">
+                <h3>OS:</h3>
+                <div class="tech-items">
+                    <img class="ubuntu button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/ubuntu.svg">
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>IDEs:</h3>
+                <div class="tech-items">
+                    <img class="vscode button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/vsc.svg" alt="">
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Languages:</h3>
+                <div class="tech-items">
+                    <img class="python button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/python.svg">
+                    <img class="html button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/html.svg">
+                    <img class="css button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/css.svg">
+                    <img class="bash button" src="https://raw.githubusercontent.com/kiomich/kiomich.github.io/538fc147dbe57325a64679db9de8604871b736be/bash.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 300);
+
+        // Add some initial particles
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createParticle, i * 100);
+        }
+
+        // Add ripple effect on click
+        document.addEventListener('click', function(e) {
+            const ripple = document.createElement('div');
+            ripple.style.position = 'fixed';
+            ripple.style.left = e.clientX + 'px';
+            ripple.style.top = e.clientY + 'px';
+            ripple.style.width = '0';
+            ripple.style.height = '0';
+            ripple.style.background = 'radial-gradient(circle, rgba(168,85,247,0.3), transparent)';
+            ripple.style.borderRadius = '50%';
+            ripple.style.transform = 'translate(-50%, -50%)';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.zIndex = '1000';
+            ripple.style.transition = 'all 0.6s ease';
+            
+            document.body.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.style.width = '100px';
+                ripple.style.height = '100px';
+                ripple.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    </script>
+</body>
+</html>
